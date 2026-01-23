@@ -9,7 +9,7 @@
     nav{
         display: flex;
         justify-content: center;
-        padding: 12p;
+        padding: 12px;
         gap: 2px;
         
     }
@@ -28,6 +28,8 @@
         border-radius: 12px;
         justify-content: center;
         border: 2px solid black;
+        box-sizing: border-box;
+     
         
         
     }
@@ -42,6 +44,10 @@
         font-weight: bold;
         padding: 10px 18px;
         border: 2px solid black;
+        justify-content: center;
+        display: block
+        
+        
         
     }
     form select {border-radius: 6px;
@@ -58,6 +64,8 @@
         margin-top: 6px;
         border-radius: 6px;
         border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 6px;
     }
     section button {
         margin-top: 15px;
