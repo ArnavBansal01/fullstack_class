@@ -1,89 +1,88 @@
 <!doctype html>
 <html>
   <head>
-    <title>post job</title>
+    <title>Post Job</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <center>
-      <h1>Post a job</h1>
+      <h1>Post a Job</h1>
       <p>Fill details to post job vacancy</p>
     </center>
 
     <hr />
 
-    <form>
-      
-      <h3>Company info</h3>
+    <form id="jobForm">
+      <h3 style="justify-content: center; display: flex">Company Info</h3>
 
-      <input type="text" placeholder="company name" /><br /><br />
-
-      About company<br />
-      <textarea rows="4" cols="40"></textarea><br /><br />
+      <input type="text" id="company" placeholder="Company Name" />
+      <br /><br />
 
       <hr />
-      <h3>Job details</h3>
+      <h3 style="justify-content: center; display: flex">Job Details</h3>
 
-      job title<br />
-      <input type="text" /><br /><br />
+      <label for="details">Job Title</label><br />
+      <input type="text" id="details" />
+      <br /><br />
 
-      job category<br />
-      <select>
-        <option>select</option>
-        <option>IT</option>
-        <option>marketing</option>
-        <option>hr</option></select
-      ><br /><br />
+      Job Category<br />
+      <select id="category">
+        <option value="">Select</option>
+        <option value="IT">IT</option>
+        <option value="Marketing">Marketing</option>
+        <option value="HR">HR</option>
+      </select>
+      <br /><br />
 
-      job type<br />
-      <select>
-        <option>select</option>
-        <option>onsite</option>
-        <option>remote</option></select
-      ><br /><br />
+      Job Type<br />
+      <select id="jobType">
+        <option value="">Select</option>
+        <option value="Onsite">Onsite</option>
+        <option value="Remote">Remote</option>
+      </select>
+      <br /><br />
 
-      experience required<br />
-      <input type="text" placeholder="like 0-2 years" /><br /><br />
+      Experience Required<br />
+      <input type="text" id="experience" placeholder="Like 0-2 years" />
+      <br /><br />
 
-      salary range<br />
-      <input type="number" placeholder="min" />
-      <input type="number" placeholder="max" /><br /><br />
-
-      <hr />
-
-      <h3>job description</h3>
-
-      write job description<br />
-      <textarea rows="5" cols="50"></textarea><br /><br />
+      Salary Range<br />
+      <input type="number" id="minSalary" placeholder="Min" />
+      <input type="number" id="maxSalary" placeholder="Max" />
+      <br /><br />
 
       <hr />
 
-      <h3>apply details</h3>
+      <h3 style="justify-content: center; display: flex">Job Description</h3>
 
-      last date to apply<br />
-      <input type="date" /><br /><br />
-
-      email to recieve application<br />
-      <input type="email" /><br /><br />
+      Write Job Description<br />
+      <textarea id="description" rows="5" cols="50"></textarea>
+      <br /><br />
 
       <hr />
 
-      <h3>recruiter info</h3>
+      <h3 style="justify-content: center; display: flex">Apply Details</h3>
 
-      recruiter name<br />
-      <input type="text" /><br /><br />
+      Last Date to Apply<br />
+      <input type="date" id="deadline" />
+      <br /><br />
 
-      email<br />
-      <input type="email" /><br /><br />
-
-      phone number<br />
-      <input type="tel" /><br /><br />
+      Email to Receive Application<br />
+      <input type="email" id="email" />
+      <br /><br />
 
       <hr />
 
-      <input type="submit" value="post job" />
-      <input type="reset" value="reset" />
+      <button type="submit" style="margin-top: 12px">Post Job</button>
+      <button type="reset" style="margin-top: 12px">Reset</button>
     </form>
+
+    <hr />
+
+    
+    <div id="jobList"></div>
+
+    <script src="post.js"></script>
   </body>
 </html>
