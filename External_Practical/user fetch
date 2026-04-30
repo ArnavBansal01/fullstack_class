@@ -1,0 +1,13 @@
+async function getUser  (){
+    try{
+   const user =  await fetch('https://jsonplaceholder.typicode.com/users');
+        const users = await user.json();
+        users.slice(0,5).forEach(user => {
+              console.log(user.name);
+    });
+
+  } catch (e) {
+    console.log(e.message);
+  }
+}
+
